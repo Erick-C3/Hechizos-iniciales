@@ -37,6 +37,7 @@
 - `ctrl + z` deshace el cambio actual
 - `ctrl + y` rehace el cambio anterior
 - `alt + shift + a` comenta el codigo seleccionado
+- `alt + clic` permite la multiple seleccion de edicion en varios lugares
 
 <br>
 
