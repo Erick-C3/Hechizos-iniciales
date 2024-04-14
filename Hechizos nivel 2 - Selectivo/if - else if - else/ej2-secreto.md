@@ -36,7 +36,8 @@ Rango de Minutos para Enfriar la Poción:
 
 - Mensaje si la Poción Sale Mal:
 
-    - "¡Potter, Potter, Potter! ¿Es esto lo mejor que puedes hacer? ¡Tu incompetencia en el arte de las pociones es tan predecible como tu falta de talento! ¡Esta poción es un completo desastre! ¡Un Gryffindor no podría hacerlo peor si lo intentara intencionalmente! Ve a tu asiento y reflexiona sobre tu incompetencia."
-Mensaje si la Poción Sale Bien:
+    > "¡Potter, Potter, Potter! ¿Es esto lo mejor que puedes hacer? ¡Tu incompetencia en el arte de las pociones es tan predecible como tu falta de talento! ¡Esta poción es un completo desastre! ¡Un Gryffindor no podría hacerlo peor si lo intentara intencionalmente! Ve a tu asiento y reflexiona sobre tu incompetencia."
 
-    - "Hmm... parece que, contra todo pronóstico, has logrado preparar una poción que no es completamente inútil. No está mal, aunque aún queda mucho que mejorar. Tal vez hayas heredado algo de habilidad de tus antepasados... o simplemente has tenido suerte. ¡Sigue así, pero no te relajes, la perfección exige constancia!"
+- Mensaje si la Poción Sale Bien:
+
+    > "Hmm... parece que, contra todo pronóstico, has logrado preparar una poción que no es completamente inútil. No está mal, aunque aún queda mucho que mejorar. Tal vez hayas heredado algo de habilidad de tus antepasados... o simplemente has tenido suerte. ¡Sigue así, pero no te relajes, la perfección exige constancia!"
