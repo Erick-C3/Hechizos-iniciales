@@ -17,21 +17,17 @@
 
 _Esta poción es especialmente útil para restaurar la energía y la vitalidad, así como para fortalecer la resistencia física y mental del bebedor._
 
-- Cantidad de Ingredientes:
+- Cantidad de Ingredientes y especificaciones:
 
     - Raíces de Mandrágora: 3 raíces
     - Ojo de Tritón: 1 ojo
     - Escamas de Dragón: 5 escamas
     - Vueltas de Cuchara:
-
-- Durante el punto 2, se deben dar 10 vueltas de cuchara de madera en sentido horario.
-Rango de Minutos para Enfriar la Poción:
-
-- Se debe dejar enfriar la poción durante 5 a 10 minutos.
-
-- Nombre en la Etiqueta de los Frascos:
-
-    - En la etiqueta de los frascos se debe escribir "Poción de Vitalidad".
+        - Durante el punto 2, se deben dar 10 vueltas de cuchara de madera en sentido horario.
+    - Rango de Minutos para Enfriar la Poción:
+        - Se debe dejar enfriar la poción durante 5 a 10 minutos.
+    - Nombre en la Etiqueta de los Frascos:
+        - En la etiqueta de los frascos se debe escribir "Poción de Vitalidad".
 
 
 - Mensaje si la Poción Sale Mal:
