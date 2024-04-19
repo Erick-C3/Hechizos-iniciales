@@ -15,6 +15,7 @@ const ES_RACION_SUFICIENTE_DEF = false;
 
 const ESTADO_PERMISO_DEF = false;
 const ELECCION_ALIMENTAR_DEF = 0;
+
 function main() {
     let nombreHipogrifo = HIPOGRIFO_DEF_NOMBRE;
     let pesoHipogrifo = HIPOGRIFO_DEF_PESO;
@@ -25,6 +26,7 @@ function main() {
     let estadoPermiso = ESTADO_PERMISO_DEF;
     let eleccionAlimentar = ELECCION_ALIMENTAR_DEF;
     let estadoAtaque = false;
+
     console.log("Como se llama el", ANIMAL_TIPO,"?");
     nombreHipogrifo = leer();
     hipogrifoEsSeguro = (nombreHipogrifo == HIPOGRIFO_SEGURO_1) || (nombreHipogrifo == HIPOGRIFO_SEGURO_2)
@@ -50,8 +52,6 @@ function main() {
     console.log("Si podes alimentarlo:", esPosibleAlimentar);
     console.log("Si es seguro:", esSeguro);
 
-    /* console.log(Math.random()); */
-    // codigo ascci del acento invertido - 96
     console.log(`Queres alimentar a ${nombreHipogrifo}?\n 1 para si / 0 para no`);
     eleccionAlimentar = Boolean(Number(leer()));
     estadoAtaque = Math.random() <= POSIBILIDAD_ATAQUE;
