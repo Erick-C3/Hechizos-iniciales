@@ -17,26 +17,23 @@
 
 _Esta poción es especialmente útil para restaurar la energía y la vitalidad, así como para fortalecer la resistencia física y mental del bebedor._
 
-- Cantidad de Ingredientes:
+- Cantidad de Ingredientes y especificaciones:
 
     - Raíces de Mandrágora: 3 raíces
     - Ojo de Tritón: 1 ojo
     - Escamas de Dragón: 5 escamas
     - Vueltas de Cuchara:
-
-- Durante el punto 2, se deben dar 10 vueltas de cuchara de madera en sentido horario.
-Rango de Minutos para Enfriar la Poción:
-
-- Se debe dejar enfriar la poción durante 5 a 10 minutos.
-
-- Nombre en la Etiqueta de los Frascos:
-
-    - En la etiqueta de los frascos se debe escribir "Poción de Vitalidad".
+        - Durante el punto 2, se deben dar 10 vueltas de cuchara de madera en sentido horario.
+    - Rango de Minutos para Enfriar la Poción:
+        - Se debe dejar enfriar la poción durante 5 a 10 minutos.
+    - Nombre en la Etiqueta de los Frascos:
+        - En la etiqueta de los frascos se debe escribir "Poción de Vitalidad".
 
 
 - Mensaje si la Poción Sale Mal:
 
-    - "¡Potter, Potter, Potter! ¿Es esto lo mejor que puedes hacer? ¡Tu incompetencia en el arte de las pociones es tan predecible como tu falta de talento! ¡Esta poción es un completo desastre! ¡Un Gryffindor no podría hacerlo peor si lo intentara intencionalmente! Ve a tu asiento y reflexiona sobre tu incompetencia."
-Mensaje si la Poción Sale Bien:
+    > "¡Potter, Potter, Potter! ¿Es esto lo mejor que puedes hacer? ¡Tu incompetencia en el arte de las pociones es tan predecible como tu falta de talento! ¡Esta poción es un completo desastre! ¡Un Gryffindor no podría hacerlo peor si lo intentara intencionalmente! Ve a tu asiento y reflexiona sobre tu incompetencia."
 
-    - "Hmm... parece que, contra todo pronóstico, has logrado preparar una poción que no es completamente inútil. No está mal, aunque aún queda mucho que mejorar. Tal vez hayas heredado algo de habilidad de tus antepasados... o simplemente has tenido suerte. ¡Sigue así, pero no te relajes, la perfección exige constancia!"
+- Mensaje si la Poción Sale Bien:
+
+    > "Hmm... parece que, contra todo pronóstico, has logrado preparar una poción que no es completamente inútil. No está mal, aunque aún queda mucho que mejorar. Tal vez hayas heredado algo de habilidad de tus antepasados... o simplemente has tenido suerte. ¡Sigue así, pero no te relajes, la perfección exige constancia!"
