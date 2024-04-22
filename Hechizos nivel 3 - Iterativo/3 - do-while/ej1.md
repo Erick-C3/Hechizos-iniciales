@@ -1,4 +1,4 @@
-# Ej 1 Destruyendo Horrocruxes
+# Destruyendo Horrocruxes
 
 - Te embarcas en una misión para destruir los Horrocruxes, objetos malditos que contienen fragmentos del alma del maligno mago Lord Voldemort. La destrucción de los Horrocruxes es crucial para derrotar a Voldemort y restaurar la paz en el mundo mágico.
 
