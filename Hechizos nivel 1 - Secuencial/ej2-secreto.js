@@ -11,22 +11,41 @@ const CARAMELO_NOMBRE_3 = "Grageas de Todos los Sabores";
 const CARAMELO_PRECIO_3 = 1;
 const CARAMELO_NOMBRE_4 = "Grageas de Limón";
 const CARAMELO_PRECIO_4 = 2;
+const CARAMELO_NOMBRE_5 = "Chicle de menta";
+const CARAMELO_PRECIO_5 = 5;
+
+const caramelosNombres = [
+    CARAMELO_NOMBRE_1,
+    CARAMELO_NOMBRE_2,
+    CARAMELO_NOMBRE_3,
+    CARAMELO_NOMBRE_4,
+    CARAMELO_NOMBRE_5,
+    "nuevo caramelo",
+    "otro nuevo caramelo"
+];
+const caramelosPrecio = [
+    CARAMELO_PRECIO_1,
+    CARAMELO_PRECIO_2,
+    CARAMELO_PRECIO_3,
+    CARAMELO_PRECIO_4,
+    CARAMELO_PRECIO_5,
+    10,
+    7
+]
+
+const CANT_CARAMELOS = caramelosNombres.length;
 
 const DEF_CANT_COMPRADA = 0;
 
 
 
 function main() {
-    let cantComprada1 = DEF_CANT_COMPRADA;
-    let cantComprada2 = DEF_CANT_COMPRADA;
-    let cantComprada3 = DEF_CANT_COMPRADA;
-    let cantComprada4 = DEF_CANT_COMPRADA;
+    let cantidadesCompradas = [DEF_CANT_COMPRADA, DEF_CANT_COMPRADA, DEF_CANT_COMPRADA, DEF_CANT_COMPRADA]
     darBienvenida();
-    cantComprada1 = ofrecerCaramelo(CARAMELO_NOMBRE_1, CARAMELO_PRECIO_1);
-    cantComprada2 = ofrecerCaramelo(CARAMELO_NOMBRE_2, CARAMELO_PRECIO_2);
-    cantComprada3 = ofrecerCaramelo(CARAMELO_NOMBRE_3, CARAMELO_PRECIO_3);
-    cantComprada4 = ofrecerCaramelo(CARAMELO_NOMBRE_4, CARAMELO_PRECIO_4);
-    mostrarInformeCompra(cantComprada1, cantComprada2, cantComprada3, cantComprada4);
+    for (let i = 0; i < CANT_CARAMELOS; i++) {
+        cantidadesCompradas[i] = ofrecerCaramelo(caramelosNombres[i], caramelosPrecio[i]);
+    }
+    mostrarInformeCompra(cantidadesCompradas);
 }
 
 
@@ -42,31 +61,26 @@ function darBienvenida() {
 
 /**
  * Muestra el precio final de compra
- * @param {Number} cantCompr1 del caramelo
- * @param {Number} cantCompr2 del caramelo
- * @param {Number} cantCompr3 del caramelo
- * @param {Number} cantCompr4 del caramelo
+ * @param {Array<Number>} cantidadesCompradas de los caramelos
  */
-function muestraPrecioFinal(cantCompr1, cantCompr2, cantCompr3, cantCompr4) {
-    let precioFinal = cantCompr1 * CARAMELO_PRECIO_1 + cantCompr2 * CARAMELO_PRECIO_2 +
-    cantCompr3 * CARAMELO_PRECIO_3 + cantCompr4 * CARAMELO_PRECIO_4;
+function muestraPrecioFinal(cantidadesCompradas) {
+    let precioFinal = 0;
+    for (let i = 0; i < cantidadesCompradas.length; i++) {
+        precioFinal = precioFinal + cantidadesCompradas[i] * caramelosPrecio[i] ;
+    }
     console.log("El total es", precioFinal, UNIDAD_MONETARIA);
 }
 
 /**
  * Muestra un informe de la compra realizada
- * @param {Number} cant1 del caramelo comprado
- * @param {Number} cant2 del caramelo comprado
- * @param {Number} cant3 del caramelo comprado
- * @param {Number} cant4 del caramelo comprado
+ * @param {Array<Number>} cantSolicitada del los caramelos a comprar
  */
-function mostrarInformeCompra(cant1, cant2, cant3, cant4) {
+function mostrarInformeCompra(cantSolicitada) {
     console.log("Informe de compra");
-    console.log("Compraste", cant1, CARAMELO_NOMBRE_1);
-    console.log("Compraste", cant2, CARAMELO_NOMBRE_2);
-    console.log("Compraste", cant3, CARAMELO_NOMBRE_3);
-    console.log("Compraste", cant4, CARAMELO_NOMBRE_4);
-    muestraPrecioFinal(cant1, cant2, cant3, cant4);
+    for (let i = 0; i < cantSolicitada.length; i++) {
+        console.log("Compraste", cantSolicitada[i], caramelosNombres[i]);
+    }
+    muestraPrecioFinal(cantSolicitada);
 }
 
 
