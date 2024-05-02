@@ -15,6 +15,25 @@ const CARAMELO_PRECIO_3 = 1;
 const CARAMELO_NOMBR_4 = "Grageas de Limón";
 const CARAMELO_PRECIO_4 = 2;
 
+const caramelosNombres = [
+    CARAMELO_NOMBR_1,
+    CARAMELO_NOMBR_2,
+    CARAMELO_NOMBR_3,
+    CARAMELO_NOMBR_4,
+    "chicle de menta",
+    "asdasdsad"
+];
+const caramelosPrecio = [
+    CARAMELO_PRECIO_1,
+    CARAMELO_PRECIO_2,
+    CARAMELO_PRECIO_3,
+    CARAMELO_PRECIO_4,
+    10,
+    34
+]
+
+const CANT_CARAMELOS_USAR = caramelosNombres.length;
+
 const DEF_CANT_COMPRADA = 0;
 const DEF_PRECIO_TOTAL = 0;
 
@@ -31,24 +50,20 @@ function saludoVendedor() {
  * @param {Number} precio del caramelo
  * @returns la cantidad de caramelos a comprar por el usuario
  */
-function preguntarCantCompraDe(nombre, precio) {
+function ofrecerCantCompraDe(nombre, precio) {
     console.log("Cuantos ", nombre, " queres? valen", precio, UNIDAD_MONEDA);
     return leer();
 }
 
 /**
  * Muestra el informe de la compra realizada
- * @param {Number} cant1 del primer caramelo
- * @param {Number} cant2 del segundo caramelo
- * @param {Number} cant3 del tercer caramelo
- * @param {Number} cant4 del cuarto caramelo
+ * @param {Array<Number>} comprasSolicitadas de los caramelos
  */
-function informeCompra(cant1, cant2, cant3, cant4) {
+function informeCompra(comprasSolicitadas) {
     console.log("Informe de compra");
-    console.log("Compraste", cant1 ,"de", CARAMELO_NOMBR_1);
-    console.log("Compraste", cant2 ,"de", CARAMELO_NOMBR_2);
-    console.log("Compraste", cant3 ,"de", CARAMELO_NOMBR_3);
-    console.log("Compraste", cant4 ,"de", CARAMELO_NOMBR_4);
+    for (let i = 0; i < CANT_CARAMELOS_USAR; i++) {
+        console.log("Compraste", comprasSolicitadas[i] ,"de", caramelosNombres[i]);
+    }
 }
 
 /**
@@ -59,27 +74,29 @@ function informeCompra(cant1, cant2, cant3, cant4) {
  * @param {Number} cant4 del cuarto caramelo
  * @returns el precio total del a compra
  */
-function calcularPrecioTotalDe(cant1, cant2, cant3, cant4) {
-    return ((cant1 * CARAMELO_PRECIO_1) + (cant2 * CARAMELO_PRECIO_2) +
-     (cant3 * CARAMELO_PRECIO_3) + (cant4 * CARAMELO_PRECIO_4));
-    
+function calcularPrecioTotalDe(comprasRealizadas) {
+    let resultadoTotal = 0;
+    for (let i = 0; i < CANT_CARAMELOS_USAR; i++) {
+        resultadoTotal = resultadoTotal + (comprasRealizadas[i]*caramelosPrecio[i]);        
+    }
+    return resultadoTotal;
 }
 
 function main() {
-    let cantCompra1 = DEF_CANT_COMPRADA;
-    let cantCompra2 = DEF_CANT_COMPRADA;
-    let cantCompra3 = DEF_CANT_COMPRADA;
-    let cantCompra4 = DEF_CANT_COMPRADA;
+    let cantCompras=[DEF_CANT_COMPRADA,DEF_CANT_COMPRADA,DEF_CANT_COMPRADA,DEF_CANT_COMPRADA]
     let precioTotal = DEF_PRECIO_TOTAL;
     saludoVendedor();
-    cantCompra1 = preguntarCantCompraDe(CARAMELO_NOMBR_1, CARAMELO_PRECIO_1);
-    cantCompra2 = preguntarCantCompraDe(CARAMELO_NOMBR_2, CARAMELO_PRECIO_2);
-    cantCompra3 = preguntarCantCompraDe(CARAMELO_NOMBR_3, CARAMELO_PRECIO_3);
-    cantCompra4 = preguntarCantCompraDe(CARAMELO_NOMBR_4, CARAMELO_PRECIO_4);
-    informeCompra(cantCompra1, cantCompra2, cantCompra3, cantCompra4);
-    precioTotal = calcularPrecioTotalDe(cantCompra1, cantCompra2, cantCompra3, cantCompra4);
+    actualizarCompras(cantCompras);
+    informeCompra(cantCompras);
+    precioTotal = calcularPrecioTotalDe(cantCompras);
     console.log("El total es", precioTotal, UNIDAD_MONEDA);
 }
 
 
 main();
+
+function actualizarCompras(cantCompras) {
+    for (let i = 0; i < CANT_CARAMELOS_USAR; i++) {
+        cantCompras[i] = ofrecerCantCompraDe(caramelosNombres[i], caramelosPrecio[i]);
+    }
+}
