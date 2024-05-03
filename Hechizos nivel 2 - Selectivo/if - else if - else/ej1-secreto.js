@@ -46,8 +46,12 @@ const DEF_CANT_INGREDIENTE = 0;
 const ESTADO_POCION_CORRECTO = true;
 const ESTADO_POCION_INCORRECTO = false;
 
+const DEF_TIEMPO_MEZCLA = 0;
+
 function main() {
-    if(verifIngresoDeIngredientes()){
+    let primerVerif = verifIngresoDeIngredientes();
+    let segundaVerif = verifTiempoMezcla();
+    if(primerVerif && segundaVerif){
         console.log(MSJ_RESPUESTA_BIEN);
     }else{
         console.log(MSJ_RESPUESTA_MAL);
@@ -60,6 +64,22 @@ function main() {
 
 main();
 
+
+/**
+ * Verifica el tiempo de mezcla ingresado por el usuario
+ * @returns el estado de verificar la mezcla de ingredientes
+ */
+function verifTiempoMezcla() {
+    let tiempoMezclaIngresado = DEF_TIEMPO_MEZCLA;
+    let estadoPocion = ESTADO_POCION_CORRECTO;
+    console.log(`Cuantos ${UNIDAD_TIEMPO} vas a calentar la mezcla?`);
+    tiempoMezclaIngresado = Number(leer());
+    if (tiempoMezclaIngresado !== TIEMPO_PREPARACION_MEZCLA) {
+        estadoPocion = ESTADO_POCION_INCORRECTO;
+    }
+    console.log("Mezclando", tiempoMezclaIngresado,UNIDAD_TIEMPO);
+    return estadoPocion;
+}
 
 /**
  * verifica las cantidades ingresadas por el usuario con las cantidades
